@@ -2,10 +2,10 @@ package entities4.entities;
 
 import org.springframework.stereotype.Component;
 
-@Component("parrot-kesha")
+@Component("parrot-kesha4")
 public class Parrot4 {
 
-    private String name = "Kesha";
+    private String name = "Kesha4";
 
     public String getName() {
         return name;
