@@ -15,9 +15,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class Main {
     public static void main(String[] args) {
-        ApplicationContext context = new AnnotationConfigApplicationContext("entities");
 
         // initializing by annotation (entities) @Component
+        System.out.println("initializing by annotation (entities) @Component");
+        ApplicationContext context = new AnnotationConfigApplicationContext("entities");
         Cat cat = context.getBean(Cat.class);
         Dog dog = (Dog) context.getBean("dog");
         Parrot parrot = context.getBean("parrot-kesha", Parrot.class);
@@ -27,6 +28,9 @@ public class Main {
         System.out.println(parrot.getName());
 
 //initializing by creating MyCinfig and @Bean annotation (entities2, entities3)
+
+        System.out.println("initializing by creating MyCinfig and @Bean annotation (entities2, entities3");
+
         ApplicationContext context2 = new AnnotationConfigApplicationContext(MyConfig.class);
 
         Cat2 cat2 = context2.getBean(Cat2.class);
@@ -41,6 +45,8 @@ public class Main {
         System.out.println(weekDay.getWeekDayName());
 
  //combinate annotation with @Component and config (entitites4 and MyConfig4)
+        System.out.println("combinate annotation with @Component and config (entitites4 and MyConfig4)");
+
         ApplicationContext context4 = new AnnotationConfigApplicationContext(MyConfig4.class);
         Cat4 cat4 = context4.getBean(Cat4.class);
         Dog4 dog4 = (Dog4) context4.getBean("dog4");
