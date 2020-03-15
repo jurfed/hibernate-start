@@ -27,9 +27,9 @@ public class Main {
         System.out.println(dog.getName());
         System.out.println(parrot.getName());
 
-//initializing by creating MyCinfig and @Bean annotation (entities2, entities3)
+//initializing by creating MyConfig and @Bean annotation (entities2, entities3)
 
-        System.out.println("initializing by creating MyCinfig and @Bean annotation (entities2, entities3");
+        System.out.println("initializing by creating MyConfig and @Bean annotation (entities2, entities3");
 
         ApplicationContext context2 = new AnnotationConfigApplicationContext(MyConfig.class);
 
@@ -44,8 +44,8 @@ public class Main {
         WeekDay weekDay = context2.getBean(WeekDay.class);
         System.out.println(weekDay.getWeekDayName());
 
- //combinate annotation with @Component and config (entitites4 and MyConfig4)
-        System.out.println("combinate annotation with @Component and config (entitites4 and MyConfig4)");
+ //composite annotation with @Component and config (entitites4 and MyConfig4)
+        System.out.println("composite annotation with @Component and config (entities4 and MyConfig4)");
 
         ApplicationContext context4 = new AnnotationConfigApplicationContext(MyConfig4.class);
         Cat4 cat4 = context4.getBean(Cat4.class);

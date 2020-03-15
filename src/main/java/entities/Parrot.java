@@ -1,7 +1,5 @@
 package entities;
 
-import com.sun.tracing.dtrace.NameAttributes;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 @Component("parrot-kesha")
